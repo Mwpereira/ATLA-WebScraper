@@ -1,0 +1,73 @@
+/*--------------------HTMLPage--------------------*/
+* {
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+    font-family: "Garamond";
+}
+
+h1{
+    font-family: "Papyrus";
+    font-size: 9.375rem;
+}
+
+h2{
+    font-family: "Papyrus";
+    font-size: 3.125rem;
+}
+
+h3{
+    font-family: "Papyrus";
+    font-size: 1.5rem;
+}
+
+footer p{
+    position: absolute;
+    text-align: center;
+	font-size: 12px;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 10px;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+}
+
+#characters{
+    width: 100px;
+    font-size: 24px;
+    margin: 7.5vh;
+}
+
+#aang-appa{
+    border: 0px;
+	transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+    cursor: pointer;
+}
+
+#instructions{
+    font-size: 20px;
+    margin-top: 75px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
