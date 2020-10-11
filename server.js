@@ -1,9 +1,20 @@
-var script = require('./scripts/script');
+//Express Server
+var script = require('./scripts/script')
 
-var http = require('http');
-http.createServer(function (req, res) {
-  
-  res.writeHead(200, {'Content-Type': 'application/json'});
-  res.end(JSON.stringify(script.loadCharacterDetails()));
+const express = require('express')
+const cors = require('cors')
+const app = express()
+const port = 8080
 
-}).listen(8080);
+app.use(cors())
+
+//Handles Post Request
+app.post('/', (req, res) => {
+  console.log("Executing request...");
+  script.getCharacterDetails(req.query.data, res);
+})
+
+//Server Listening On Respective Port
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`)
+})
