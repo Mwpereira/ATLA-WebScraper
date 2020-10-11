@@ -34,5 +34,5 @@ then open the index.html file located under the /client directory.
   
 ## 📷 Screenshots
 
-<img src="/build/screenshots/indexPage.PNG" width="700x50">
-<img src="/build/screenshots/characterPage.PNG" width="700x50">
+<img src="/build/screenshots/indexPage.PNG" width="300x50">
+<img src="/build/screenshots/characterPage.PNG" width="300x50">
