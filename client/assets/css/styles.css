@@ -19,6 +19,7 @@ h2{
 
 h3{
     font-size: 2rem;
+    text-align: center;
 }
 
 p{
@@ -40,7 +41,6 @@ footer p{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    text-align: center;
     height: 100vh;
     background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
