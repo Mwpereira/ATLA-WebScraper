@@ -10,6 +10,7 @@ h1{
     font-family: "Papyrus";
     font-size: 5.5rem;
     margin-top: 5vh;
+    text-align: center;
 }
 
 h2{
@@ -62,8 +63,8 @@ footer p{
 
 .details span img{
     margin-right: 5px;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;d
 }
 
 #charactersList{
