@@ -16,7 +16,7 @@ Start local server
 node server.js
 ```
 
-then open the index.html file located under the /client directory.
+Open the index.html file located under the /client directory and enjoy!
 
 
 ## 🔐 Back-End
