@@ -18,7 +18,7 @@ $("#aang-appa").click(function () {
     
     //Request Options
     var requestOptions = {
-        method: 'POST',
+        method: 'GET',
         redirect: 'follow',
         headers: {
             "Access-Control-Origin":"*"

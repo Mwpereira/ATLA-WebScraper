@@ -9,7 +9,7 @@ const port = 8080
 app.use(cors())
 
 //Handles Post Request
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
   console.log("Executing request...");
   script.getCharacterDetails(req.query.data, res);
 })
