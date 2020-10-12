@@ -13,6 +13,7 @@ npm install
 
 Start local server
 ```
+cd server
 node server.js
 ```
 
