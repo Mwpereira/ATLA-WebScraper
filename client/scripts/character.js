@@ -10,4 +10,8 @@ function loadCharacterDetails(){
     $("#characterEyeColour").html(`Eye Colour: ${character.eyeColour}`);
     $("#characterLoveInterest").html(`Love Interest: ${character.loveInterest}`);
     $("#characterWeaponOfChoice").html(`Weapon of Choice: ${character.weaponOfChoice}`);
+
+    if($("#characterLoveInterest").text()=='Love Interest: undefined'){
+        $("#characterLoveInterest").text('Love Interest:  None');
+    }
 }

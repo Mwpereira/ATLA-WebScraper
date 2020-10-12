@@ -1,8 +1,10 @@
 //Listener event for when the user chooses a charater and wants to continue
 $("#aang-appa").click(function () {
 
+    //Gets character chosen
     let character = $("#charactersList option:selected").text();
 
+    //Corrects path for URL
     if(character == 'Ty Lee'){
         character = 'Ty_Lee';
     }
