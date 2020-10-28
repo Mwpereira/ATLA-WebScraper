@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!---jQuery--->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!---CSS--->
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <!---Website Properties--->
@@ -18,29 +18,42 @@
                 <h2>The Last Airbender</h2>
             </span>
 
-                <select name="characters" id="charactersList">
-                    <option value="Aang">Aang</option>
-                    <option value="Zuko">Zuko</option>
-                    <option bvalue="Katara">Katara</option>
-                    <option value="Sokka">Sokka</option>
-                    <option value="Toph">Toph</option>
-                    <option value="Azula">Azula</option>
-                    <option value="Iroh">Iroh</option>
-                    <option value="Ty Lee">Ty Lee</option>
-                    <option value="Appa">Appa</option>
-                </select>
+            <select name="characters" id="charactersList">
+                <option value="Aang">Aang</option>
+                <option value="Zuko">Zuko</option>
+                <option bvalue="Katara">Katara</option>
+                <option value="Sokka">Sokka</option>
+                <option value="Toph">Toph</option>
+                <option value="Azula">Azula</option>
+                <option value="Iroh">Iroh</option>
+                <option value="Ty Lee">Ty Lee</option>
+                <option value="Appa">Appa</option>
+            </select>
 
-                <img id="aang-appa" src="./assets/img/aang-appa.png" style="width: 150px; height: 150px;" />
-                
-                <img id="loadingGif" src="./assets/img/loading.gif" style="width: 150px; height: 150px; margin-top: 10vh; display: none;" />
-                <p id="loadingText" style="display: none; font-style: italic;">Loading please wait...</p>
+            <img
+                id="aang-appa"
+                src="./assets/img/aang-appa.png"
+                style="width: 150px; height: 150px"
+            />
+
+            <img
+                id="loadingGif"
+                src="./assets/img/loading.gif"
+                style="width: 150px; height: 150px; margin-top: 10vh; display: none"
+            />
+            <p id="loadingText" style="display: none; font-style: italic">Loading please wait...</p>
 
             <p id="instructions">Simply choose a character, then click the image!</p>
 
             <footer>
-                <p>Demonstration Of The Puppeteer API. All Data Provided By <a href="https://avatar.fandom.com/wiki/Avatar_Wiki" target="_blank">Avatar Fandom</a>.</p>
+                <p>
+                    Demonstration Of The Puppeteer API. All Data Provided By
+                    <a href="https://avatar.fandom.com/wiki/Avatar_Wiki" target="_blank"
+                        >Avatar Fandom</a
+                    >.
+                </p>
             </footer>
         </div>
     </body>
-    <script src="./scripts/index.js"></script> 
+    <script src="./scripts/index.js"></script>
 </html>

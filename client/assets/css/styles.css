@@ -1,43 +1,43 @@
 /*--------------------HTMLPage--------------------*/
 * {
-	margin: 0px;
-	padding: 0px;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: "Garamond";
 }
 
-h1{
+h1 {
     font-family: "Papyrus";
     font-size: 5.5rem;
     margin-top: 5vh;
     text-align: center;
 }
 
-h2{
+h2 {
     font-family: "Papyrus";
     font-size: 2.25rem;
 }
 
-h3{
+h3 {
     font-size: 2rem;
     text-align: center;
 }
 
-p{
+p {
     font-size: 24px;
     word-wrap: break-word;
 }
 
-footer p{
+footer p {
     position: absolute;
     text-align: center;
-	font-size: 12px;
+    font-size: 12px;
     bottom: 2.5vh;
     left: 0;
     right: 0;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -49,76 +49,76 @@ footer p{
     padding: 10px;
 }
 
-.details{
+.details {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     min-width: 200px;
 }
 
-.details span{
+.details span {
     display: flex;
     flex-direction: row;
     margin: 5px;
 }
 
-.details span img{
+.details span img {
     margin-right: 5px;
     width: 28px;
     height: 28px;
 }
 
-#charactersList{
+#charactersList {
     width: 100px;
     font-size: 24px;
     margin: 7.5vh;
 }
 
-#aang-appa{
+#aang-appa {
     border: 0px;
-	transform: translatey(0px);
+    transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
     cursor: pointer;
 }
 
-#instructions{
+#instructions {
     margin-top: 5vh;
 }
 
-#characterImgName{
+#characterImgName {
     margin: 2rem;
 }
 
-#characterImg{
+#characterImg {
     border-radius: 16px;
 }
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-10px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
 }
 
 @media only screen and (max-width: 900px) {
-    h1{
+    h1 {
         margin-top: 1vh;
     }
 
-    p{
+    p {
         font-size: 18px;
-    }   
+    }
 
-    .details span{
+    .details span {
         margin: 2px;
     }
 
-    #characterImgName{
+    #characterImgName {
         margin: 1rem;
     }
 }

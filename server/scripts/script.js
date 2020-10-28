@@ -1,48 +1,50 @@
 //Grabs info for selected character from Avatar.Fandom.com
-function getCharacterDetails(character, response){
+function getCharacterDetails(character, response) {
+    //Load Puppeteer
+    const puppeteer = require("puppeteer");
 
-//Load Puppeteer
-const puppeteer = require('puppeteer');
+    (async () => {
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
 
-(async () => {
+        //Visit Character's Designated Website
+        await page.goto(`https://avatar.fandom.com/wiki/${character}`, {
+            waitUntil: "networkidle2",
+        });
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+        const data = await page.evaluate(async () => {
+            let characterData = {
+                img: document.querySelector(".pi-image-thumbnail").src,
+                name: document.querySelector(".page-header__title").innerText,
+                nationality: document.querySelector("[data-source='nationality'] > div").innerText,
+                ethnicity: document.querySelector("[data-source='ethnicity'] > div").innerText,
+                gender: document.querySelector("[data-source='gender'] > div").innerText,
+                eyeColour: document.querySelector("[data-source='eyes'] > div").innerText,
+                weaponOfChoice: Array.from(
+                    document.querySelectorAll("[data-source='weapon'] > div"),
+                    (element) => element.textContent
+                ),
+            };
 
-    //Visit Character's Designated Website
-    await page.goto(`https://avatar.fandom.com/wiki/${character}`, { waitUntil: 'networkidle2'});
+            //Handles missing value for Iroh and Appa
+            try {
+                characterData.loveInterest = document.querySelector(
+                    "[data-source='loveinterest'] > div"
+                ).innerText;
+            } catch (error) {
+                console.log(error);
+            }
 
-    const data = await page.evaluate(async () => {
-        let characterData = {
-          img: document.querySelector('.pi-image-thumbnail').src,
-          name: document.querySelector('.page-header__title').innerText, 
-          nationality: document.querySelector("[data-source='nationality'] > div").innerText, 
-          ethnicity: document.querySelector("[data-source='ethnicity'] > div").innerText,
-          gender: document.querySelector("[data-source='gender'] > div").innerText,
-          eyeColour: document.querySelector("[data-source='eyes'] > div").innerText,
-          weaponOfChoice: Array.from(document.querySelectorAll("[data-source='weapon'] > div"), element => element.textContent)       
-        }
+            return characterData;
+        });
+        await browser.close();
 
-        //Handles missing value for Iroh and Appa
-        try{
-          characterData.loveInterest = document.querySelector("[data-source='loveinterest'] > div").innerText;
-        }
-        catch(error){
-          console.log(error);
-        }
-
-        return characterData;
-      });
-      await browser.close();
-
-      return Promise.resolve(data);         
-
-  })().then(resolve => {
-    console.log("Request Completed");
-    response.send(JSON.stringify(resolve)); //Sends Response
-    response.end();
-});
-  
+        return Promise.resolve(data);
+    })().then((resolve) => {
+        console.log("Request Completed");
+        response.send(JSON.stringify(resolve)); //Sends Response
+        response.end();
+    });
 }
 
 exports.getCharacterDetails = getCharacterDetails;
