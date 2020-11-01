@@ -1,4 +1,4 @@
-# 💨 ATLA-Webscraper
+# 💨 ATLA Webscraper
 
 Demonstrating Webscraping by using the Puppeteer API, alongside Node Express to run the local server.
 
