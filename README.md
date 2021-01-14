@@ -1,6 +1,6 @@
-# 💨 ATLA Webscraper
+# 💨 ATLA Web Scraper
 
-Demonstrating Webscraping by using the Puppeteer API, alongside Node Express to run the local server.
+Demonstrating web scraping by using the Puppeteer API, alongside Node Express to run the local server.
 
 ## 📐 Project Setup
 ```
