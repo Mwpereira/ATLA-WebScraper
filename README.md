@@ -1,6 +1,6 @@
 # 💨 ATLA Web Scraper
 
-Demonstrating web scraping by using the Puppeteer API, alongside Node Express to run the local server. A new way to preview any of your favourite Avatar characters.
+Demonstrating web scraping by using the Puppeteer library, alongside Node Express to run the local server. A new way to preview any of your favourite Avatar characters.
 
 ## 📐 Project Setup
 ```
@@ -26,6 +26,7 @@ Open the index.html file located under the /client directory and enjoy!
   
   * *NodeJs* - for JavaScript runtime
   * *Express* - for hosting local server
+  * *Puppeteer* - for web scraping
 
 ## 🎨 Front-End
 
