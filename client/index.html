@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!---jQuery--->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!---CSS--->
-        <link rel="stylesheet" href="./assets/css/styles.css" />
-        <!---Website Properties--->
-        <title>Avatar</title>
-        <link rel="icon" href="./assets/icons/appa.ico" />
-    </head>
-    <body>
-        <div class="container">
-            <span>
-                <h1>Avatar</h1>
-                <h2>The Last Airbender</h2>
-            </span>
 
-            <select name="characters" id="charactersList">
-                <option value="Aang">Aang</option>
-                <option value="Zuko">Zuko</option>
-                <option bvalue="Katara">Katara</option>
-                <option value="Sokka">Sokka</option>
-                <option value="Toph">Toph</option>
-                <option value="Azula">Azula</option>
-                <option value="Iroh">Iroh</option>
-                <option value="Ty Lee">Ty Lee</option>
-                <option value="Appa">Appa</option>
-            </select>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---Bulma--->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!---CSS--->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!---jQuery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---Website Properties--->
+    <title>Avatar</title>
+    <link rel="icon" href="./assets/icon/appa.ico" />
+</head>
 
-            <img
-                id="aang-appa"
-                src="./assets/img/aang-appa.png"
-                style="width: 150px; height: 150px"
-            />
-
-            <img
-                id="loadingGif"
-                src="./assets/img/loading.gif"
-                style="width: 150px; height: 150px; margin-top: 10vh; display: none"
-            />
-            <p id="loadingText" style="display: none; font-style: italic">Loading please wait...</p>
-
-            <p id="instructions">Simply choose a character, then click the image!</p>
-
-            <footer>
-                <p>
-                    Demonstration Of The Puppeteer API. All Data Provided By
-                    <a href="https://avatar.fandom.com/wiki/Avatar_Wiki" target="_blank"
-                        >Avatar Fandom</a
-                    >.
-                </p>
-            </footer>
+<body>
+    <!-- Title Section -->
+    <div class="section has-text-centered">
+        <div class="mb-0">
+            <h1>Avatar</h1>
+            <h2>The Last Airbender</h2>
         </div>
-    </body>
-    <script src="./scripts/index.js"></script>
+    </div>
+    <!-- Character Selection -->
+    <div class="columns is-center is-centered is-vcentered has-text-centered">
+        <div class="column pt-0">
+            <div class="select mb-6">
+                <select>
+                    <option value="Aang">Aang</option>
+                    <option value="Zuko">Zuko</option>
+                    <option bvalue="Katara">Katara</option>
+                    <option value="Sokka">Sokka</option>
+                    <option value="Toph">Toph</option>
+                    <option value="Azula">Azula</option>
+                    <option value="Iroh">Iroh</option>
+                    <option value="Ty_Lee">Ty Lee</option>
+                    <option value="Appa">Appa</option>
+                </select>
+            </div>
+            <div class="mb-5">
+                <figure class="image m-3 is-inline-block" id="aang-appa-figure">
+                    <img id="aang-appa" src="./assets/img/aang-appa.png" style="width: 150px; height: 150px;" />
+                </figure>
+                <figure class="image" id="loadingFigure" style="display: none;">
+                    <img id="loadingGif" src="./assets/img/loading.gif" style="width: 150px; height: 150px;" />
+                </figure>
+                <p id="loadingText" style="display: none; font-style: italic">Web scraping data from <a
+                        href="https://avatar.fandom.com/wiki/Avatar_Wiki" target="_blank"
+                        rel="noopener noreferrer">Avatar
+                        Fandom</a>
+                    please wait...</p>
+            </div>
+            <p id="instructions">Simply choose a character, then click the image!</p>
+        </div>
+    </div>
+</body>
+<script src="./scripts/index.js"></script>
+
 </html>

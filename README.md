@@ -1,39 +1,33 @@
 # 💨 ATLA Web Scraper
 
-Demonstrating web scraping by using the Puppeteer library, alongside Node Express to run the local server. A new way to preview any of your favourite Avatar characters.
+Demonstrating web scraping by using the Puppeteer library, alongside AWS serverless. A new way to preview any of your favourite Avatar characters. Data provided by Avatar Fandom.
 
 ## 📐 Project Setup
+
 ```
 git clone https://github.com/Mwpereira/ATLA-Webscraper.git
 cd ATLA-Webscraper
-npm install
-```
-
-## 🖥 Developing
-
-Start local server
-```
-cd server
-node server.js
 ```
 
 Open the index.html file located under the /client directory and enjoy!
 
+## 📚 Frameworks
+
+-   _Bulma_ - for UI components and styling
 
 ## 🔐 Back-End
 
-  ### Dependencies
-  
-  * *NodeJs* - for JavaScript runtime
-  * *Express* - for hosting local server
-  * *Puppeteer* - for web scraping
+### Dependencies
+
+-   _Serverless_ - for hosting AWS resources including API Gateway and Lambdas
+-   _Puppeteer_ - for web scraping
 
 ## 🎨 Front-End
 
-  ### Dependencies
-  
-  * *jQuery* - for HTML DOM manipulation
-  
+### Dependencies
+
+-   _jQuery_ - for HTML DOM manipulation
+
 ## 📷 Screenshots
 
 <img src="/build/screenshots/indexPage.PNG" width="300x50">

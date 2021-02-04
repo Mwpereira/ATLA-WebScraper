@@ -1,77 +1,39 @@
-/*--------------------HTMLPage--------------------*/
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Garamond";
+}
+
+html {
+    background-image: url('../img/bg.jpg');
+    height: 100vh;
+}
+
+footer {
+    background-color: transparent !important;
 }
 
 h1 {
-    font-family: "Papyrus";
+    font-family: 'Papyrus';
     font-size: 5.5rem;
-    margin-top: 5vh;
-    text-align: center;
 }
 
 h2 {
-    font-family: "Papyrus";
+    font-family: 'Papyrus';
     font-size: 2.25rem;
 }
 
 h3 {
     font-size: 2rem;
-    text-align: center;
 }
 
 p {
-    font-size: 24px;
+    font-size: 22px;
     word-wrap: break-word;
 }
 
-footer p {
-    position: absolute;
-    text-align: center;
-    font-size: 12px;
-    bottom: 2.5vh;
-    left: 0;
-    right: 0;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../img/bg.jpg");
-    background-repeat: no-repeat;
-    padding: 10px;
-}
-
-.details {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    min-width: 200px;
-}
-
-.details span {
-    display: flex;
-    flex-direction: row;
-    margin: 5px;
-}
-
-.details span img {
-    margin-right: 5px;
-    width: 28px;
-    height: 28px;
-}
-
-#charactersList {
-    width: 100px;
-    font-size: 24px;
-    margin: 7.5vh;
+.columns {
+    margin: 0 !important;
 }
 
 #aang-appa {
@@ -81,16 +43,8 @@ footer p {
     cursor: pointer;
 }
 
-#instructions {
-    margin-top: 5vh;
-}
-
-#characterImgName {
-    margin: 2rem;
-}
-
 #characterImg {
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 @keyframes float {
@@ -102,23 +56,5 @@ footer p {
     }
     100% {
         transform: translatey(0px);
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    h1 {
-        margin-top: 1vh;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    .details span {
-        margin: 2px;
-    }
-
-    #characterImgName {
-        margin: 1rem;
     }
 }

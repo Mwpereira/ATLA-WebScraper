@@ -1,0 +1,23 @@
+service: atla-webscraper
+
+provider:
+    name: aws
+    runtime: nodejs12.x
+    stage: dev
+    region: us-east-1
+
+functions:
+    character:
+        handler: server.handler
+        description: Gets character's information
+        events:
+            - http:
+                method: post
+                path: src/script
+                cors:
+                    origin: *
+                    headers:
+                        - Access-Control-Allow-Credentials
+                        - Access-Control-Allow-Headers
+                        - Access-Control-Allow-Methods
+                        - Access-Control-Allow-Origin

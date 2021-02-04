@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!---jQuery--->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!---CSS--->
-        <link rel="stylesheet" href="./assets/css/styles.css" />
-        <!---Website Properties--->
-        <title>Avatar</title>
-        <link rel="icon" href="./assets/icons/appa.ico" />
-    </head>
-    <body onload="loadCharacterDetails()">
-        <div class="container">
-            <span>
-                <h1>Avatar</h1>
-                <h2>The Last Airbender</h2>
-            </span>
 
-            <span id="characterImgName">
-                <img id="characterImg" style="width: 34.5vh" />
-                <h3 id="characterName"></h3>
-            </span>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---Bulma--->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!---CSS--->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!---jQuery--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---Website Properties--->
+    <title>Avatar</title>
+    <link rel="icon" href="./assets/icon/appa.ico" />
+</head>
 
-            <div class="details">
-                <span>
-                    <img src="./assets/img/nationality.png" />
-                    <p id="characterNationality"></p>
-                </span>
-
-                <span>
-                    <img src="./assets/img/elements.jpg" />
+<body onload="loadCharacterDetails()">
+    <!-- Title Section -->
+    <div class="section has-text-centered mb-0">
+        <h1>Avatar</h1>
+        <h2>The Last Airbender</h2>
+    </div>
+    <div class="section has-text-centered pt-0 pb-3">
+        <figure class="image" style="display: inline-block;">
+            <img id="characterImg" style="width: 300px" />
+        </figure>
+        <h3 id="characterName"></h3>
+    </div>
+    <!-- Character Information -->
+    <div class="section pt-5">
+        <div class="columns is-mobile is-centered is-vcentered">
+            <div class="column is-12-mobile is-8-tablet is-6-desktop is-5-widescreen is-4-fullhd">
+                <div class="level is-mobile is-justify-content-flex-start">
+                    <figure class="image is-32x32 mr-3">
+                        <img src="./assets/img/nationality.png" />
+                    </figure>
                     <p id="characterEthnicity"></p>
-                </span>
-
-                <span>
-                    <p id="characterGender"></p>
-                </span>
-
-                <span>
-                    <img src="./assets/img/eye.png" />
+                </div>
+                <div class="level is-mobile is-justify-content-flex-start">
+                    <figure class="image is-32x32 mr-3">
+                        <img src="./assets/img/elements.png" />
+                    </figure>
+                    <p id="characterNationality"></p>
+                </div>
+                <div class="level is-mobile is-justify-content-flex-start">
+                    <figure class="image is-32x32 mr-3">
+                        <img src="./assets/img/eye.png" />
+                    </figure>
                     <p id="characterEyeColour"></p>
-                </span>
-
-                <span>
-                    <img src="./assets/img/heart.png" />
+                </div>
+                <div class="level is-mobile is-justify-content-flex-start">
+                    <figure class="image is-32x32 mr-3">
+                        <img src="./assets/img/heart.png" />
+                    </figure>
                     <p id="characterLoveInterest"></p>
-                </span>
-
-                <span>
-                    <img src="./assets/img/weapon.png" />
+                </div>
+                <div class="level is-mobile is-justify-content-flex-start">
+                    <figure class="image is-32x32 mr-3">
+                        <img src="./assets/img/weapon.png" />
+                    </figure>
                     <p id="characterWeaponOfChoice"></p>
-                </span>
+                </div>
             </div>
-
-            <footer>
-                <p>
-                    Demonstration Of The Puppeteer API. All Data Provided By
-                    <a href="https://avatar.fandom.com/wiki/Avatar_Wiki" target="_blank"
-                        >Avatar Fandom</a
-                    >.
-                </p>
-            </footer>
         </div>
-        <script src="./scripts/character.js"></script>
-    </body>
+</body>
+<script src="./scripts/character.js"></script>
+
 </html>
