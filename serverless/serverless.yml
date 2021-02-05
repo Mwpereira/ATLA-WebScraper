@@ -1,5 +1,13 @@
 service: atla-webscraper
 
+frameworkVersion: '2'
+
+package:
+    individually: true
+
+plugins:
+    - serverless-offline
+
 provider:
     name: aws
     runtime: nodejs12.x
@@ -8,16 +16,16 @@ provider:
 
 functions:
     character:
-        handler: server.handler
-        description: Gets character's information
+        handler: 'src/handler.getCharacterDetails'
+        description: "Gets character's information"
         events:
             - http:
-                method: post
-                path: src/script
-                cors:
-                    origin: *
-                    headers:
-                        - Access-Control-Allow-Credentials
-                        - Access-Control-Allow-Headers
-                        - Access-Control-Allow-Methods
-                        - Access-Control-Allow-Origin
+                  method: 'post'
+                  path: 'character'
+                  cors:
+                      origin: '*'
+                      headers:
+                          - Access-Control-Allow-Credentials
+                          - Access-Control-Allow-Headers
+                          - Access-Control-Allow-Methods
+                          - Access-Control-Allow-Origin

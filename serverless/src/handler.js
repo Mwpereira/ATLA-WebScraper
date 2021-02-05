@@ -1,10 +1,9 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-lambda');
 
 const headers = {
-    'Access-Control-Allow-Credentials': true,
     'Access-Control-Allow-Headers': 'Content-Type,x-requested-with',
     'Access-Control-Allow-Methods': 'POST,GET,OPTIONS',
-    'Access-Control-Allow-Origin': `https://atla.michaelpereira.dev`,
+    'Access-Control-Allow-Origin': `atla.michaelpereira.dev`,
     'X-Frame-Options': 'SAMEORIGIN',
     'X-Requested-With': '*',
     'X-Xss-Protection': '1; mode=block',
@@ -13,11 +12,13 @@ const headers = {
 /**
  * Grabs info for selected character from Avatar.Fandom.com
  */
-export const getCharacterDetails = async (event) => {
-    (async () => {
+module.exports.getCharacterDetails = async (event) => {
+    return (async () => {
         const character = JSON.parse(event.body).character;
 
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.getBrowser({
+            headless: true,
+        });
         const page = await browser.newPage();
 
         // Visit Character's Designated Website
@@ -70,5 +71,3 @@ export const getCharacterDetails = async (event) => {
             };
         });
 };
-
-exports.getCharacterDetails = getCharacterDetails;

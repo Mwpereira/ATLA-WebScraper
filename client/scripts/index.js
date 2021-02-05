@@ -16,7 +16,7 @@ $('#aang-appa').click(() => {
         body: {
             character: $('select option:selected').text(),
         },
-        method: 'GET',
+        method: 'POST',
         redirect: 'follow',
         headers: {
             'Access-Control-Allow-Origin': '*',
@@ -24,7 +24,7 @@ $('#aang-appa').click(() => {
     };
 
     // Request to the server
-    fetch(`https://michaelpereira.dev/`, requestOptions)
+    fetch(`https://2dfbz8bv86.execute-api.us-east-1.amazonaws.com/dev/character`, requestOptions)
         .then((response) => response.text())
         .then((res) => {
             sessionStorage.setItem('characterItem', res);

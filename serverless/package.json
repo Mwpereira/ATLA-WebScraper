@@ -1,16 +1,14 @@
 {
   "name": "avatar-web-scraper",
   "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "start": "node ./server.js"
-  },
-  "author": "",
+  "description": "Demonstrating web scraping by using the Puppeteer library, alongside AWS serverless. A new way to preview any of your favourite Avatar characters. Data provided by Avatar Fandom.",
+  "author": "Michael W. Pereira",
   "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "puppeteer": "^5.2.1"
+  "scripts": {
+    "start": "node "
   },
-  "devDependencies": {}
+  "dependencies": {
+    "puppeteer-lambda": "^1.1.3",
+    "serverless-offline": "^6.8.0"
+  }
 }
