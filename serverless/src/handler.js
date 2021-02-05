@@ -16,6 +16,8 @@ module.exports.getCharacterDetails = async (event) => {
     return (async () => {
         const character = JSON.parse(event.body).character;
 
+        console.log(character);
+
         const browser = await puppeteer.getBrowser({
             headless: true,
         });
