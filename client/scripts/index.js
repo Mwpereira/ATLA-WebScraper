@@ -24,7 +24,7 @@ $('#aang-appa').click(() => {
     };
 
     // Request to the server
-    fetch(`https://2dfbz8bv86.execute-api.us-east-1.amazonaws.com/dev/character`, requestOptions)
+    fetch(`https://y0u5xf98u9.execute-api.us-east-1.amazonaws.com/dev/character`, requestOptions)
         .then((response) => response.text())
         .then((res) => {
             sessionStorage.setItem('characterItem', res);
