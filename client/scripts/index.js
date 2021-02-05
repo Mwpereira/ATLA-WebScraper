@@ -19,7 +19,8 @@ $('#aang-appa').click(() => {
         method: 'POST',
         redirect: 'follow',
         headers: {
-            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin':
+                'https://y0u5xf98u9.execute-api.us-east-1.amazonaws.com/dev/character',
         },
     };
 
