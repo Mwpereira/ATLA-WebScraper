@@ -18,9 +18,6 @@ $('#aang-appa').click(() => {
         },
         method: 'POST',
         redirect: 'follow',
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        },
     };
 
     // Request to the server
