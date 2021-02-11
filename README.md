@@ -7,6 +7,9 @@ Demonstrating web scraping by using the Puppeteer library, alongside AWS serverl
 ```
 git clone https://github.com/Mwpereira/ATLA-Webscraper.git
 cd ATLA-Webscraper
+cd serverless
+npm install
+serverless offline
 ```
 
 Open the index.html file located under the /client directory and enjoy!
@@ -19,7 +22,7 @@ Open the index.html file located under the /client directory and enjoy!
 
 ### Dependencies
 
--   _Serverless_ - for hosting AWS resources including API Gateway and Lambdas
+-   _Serverless Offline_ - for hosting AWS resources including API Gateway and Lambda Edge locally
 -   _Puppeteer_ - for web scraping
 
 ## 🎨 Front-End
