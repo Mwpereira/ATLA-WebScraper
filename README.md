@@ -9,12 +9,18 @@ git clone https://github.com/Mwpereira/ATLA-Webscraper.git
 cd ATLA-Webscraper
 ```
 
-Installing and running serverless locally
+Installing packages and running serverless locally
 
 ```
 cd serverless
 npm install
 serverless offline
+```
+
+Ensure you have serverless installed
+
+```
+npm install -g serverless
 ```
 
 Open the index.html file located under the /client directory and enjoy!
