@@ -6,11 +6,7 @@ package:
     individually: true
 
 plugins:
-    - serverless-webpack
-
-custom:
-    webpack:
-        webpackConfig: './webpack.config.js'
+    - serverless-offline
 
 provider:
     name: aws
@@ -20,16 +16,9 @@ provider:
 
 functions:
     character:
-        handler: 'src/handler.getCharacterDetails'
+        handler: 'src/handlers/handler.getCharacterDetails'
         description: "Gets character's information"
         events:
             - http:
                   method: 'post'
                   path: 'character'
-                  cors:
-                      origin: '*'
-                      headers:
-                          - Access-Control-Allow-Credentials
-                          - Access-Control-Allow-Headers
-                          - Access-Control-Allow-Methods
-                          - Access-Control-Allow-Origin

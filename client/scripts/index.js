@@ -3,25 +3,25 @@
  */
 $('#aang-appa').click(() => {
     // Hide and show elements accordingly
+    const character = $('select option:selected').text();
     $('.select').remove();
     $('#instructions').remove();
     $('#aang-appa-figure').remove();
     $('#aang-appa').remove();
-    $('#loadingFigure').addClass('mb-6');
-    $('#loadingFigure').css('display', 'inline-block');
+    $('#loadingFigure').addClass('mb-6').css('display', 'inline-block');
     $('#loadingText').css('display', 'block');
 
     // Request Options
     const requestOptions = {
-        body: {
-            character: $('select option:selected').text(),
-        },
+        body: JSON.stringify({
+            character: character,
+        }),
         method: 'POST',
         redirect: 'follow',
     };
 
     // Request to the server
-    fetch(`https://y0u5xf98u9.execute-api.us-east-1.amazonaws.com/dev/character`, requestOptions)
+    fetch(`http://localhost:3000/dev/character`, requestOptions)
         .then((response) => response.text())
         .then((res) => {
             sessionStorage.setItem('characterItem', res);

@@ -1,9 +1,17 @@
-.DS_Store
-node_modules
+# Serverless directories
 .serverless
+.webpack
+
+.DS_Store
+.logs
+node_modules
 /dist
 
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
 # local env files
+.env
 .env.local
 .env.*.local
 
