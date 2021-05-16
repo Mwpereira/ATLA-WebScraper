@@ -48,6 +48,10 @@ p {
     border-radius: 10px;
 }
 
+#characterDetails > .column {
+    display: flex;
+}
+
 @keyframes float {
     0% {
         transform: translatey(0px);
@@ -57,5 +61,14 @@ p {
     }
     100% {
         transform: translatey(0px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        background-image: url('../img/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+        height: 100vh;
     }
 }
